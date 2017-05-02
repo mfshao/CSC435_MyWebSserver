@@ -1,0 +1,36 @@
+[Output from MyListener.java]
+Mingfei Shao's MyListener starting up, listening at port 2540.
+
+GET /dog.txt HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+
+
+[Output from MyTelnet.java]
+Mingfei Shao's Telnet Client.
+
+Using server: condor.depaul.edu, Port: 80
+Double press enter to send out request.
+GET /elliott/dog.txt HTTP/1.1
+Host: condor.depaul.edu:80
+
+
+HTTP/1.1 200 OK
+Date: Fri, 07 Oct 2016 03:20:33 GMT
+Server: Apache/2.2.3 (Red Hat)
+Last-Modified: Wed, 07 Oct 2015 20:29:55 GMT
+ETag: "30c78-30-521899bff76c0"
+Accept-Ranges: bytes
+Content-Length: 48
+Content-Type: text/plain
+Connection: close
+
+This is Elliott's dog file on condor. Good job!
+Connection closed by foreign host.
+

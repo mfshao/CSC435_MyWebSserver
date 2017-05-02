@@ -1,0 +1,329 @@
+Mingfei Shao's MyWebServer starting up, listening at port 2540.
+
+GET / HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+======== Begin server reply ========		<< Server's reply to server's root folder GET request
+HTTP/1.1 200 OK
+Content-Length: 542
+Content-Type: text/html
+
+<html>
+<pre>
+<h1>Index of ./</h1>
+<a href="./">Parent Directory</a><br>
+<a href=".idea/">.idea/</a><br>
+<a href="addnums.html">addnums.html</a><br>
+<a href="CSC435_ProgramTwo.iml">CSC435_ProgramTwo.iml</a><br>
+<a href="dog.txt">dog.txt</a><br>
+<a href="favicon.ico">favicon.ico</a><br>
+<a href="http-streams.txt">http-streams.txt</a><br>
+<a href="lion.html">lion.html</a><br>
+<a href="out/">out/</a><br>
+<a href="serverlog.txt">serverlog.txt</a><br>
+<a href="src/">src/</a><br>
+<a href="sub-a/">sub-a/</a><br>
+</pre>
+</html>
+======== End server reply ========
+
+
+GET /favicon.ico HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+Accept: */*
+Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+======== Begin server reply ========		<< Server's reply to GET favicon.ico, binary content of favicon.ico omitted for space efficiency
+HTTP/1.1 200 OK
+Content-Length: 116288
+Content-Type: image/x-icon
+
+[Binary data]
+======== End server reply ========
+
+
+GET /dog.txt HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+======== Begin server reply ========
+HTTP/1.1 200 OK
+Content-Length: 51
+Content-Type: text/plain
+
+This is Mingfei's dog file on localhost. Good job!
+======== End server reply ========		<< Server's reply to GET request for text file
+
+
+GET /lion.html HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+======== Begin server reply ========		<< Server's reply to GET request for html file
+HTTP/1.1 200 OK
+Content-Length: 79
+Content-Type: text/html
+
+<html>
+<h1> This is Lion.html in Mingfei's localhost. Good work! </h1>
+</html>
+======== End server reply ========
+
+
+GET /sub-a/ HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+======== Begin server reply ========		<< Server's reply to GET request for sub directory
+HTTP/1.1 200 OK
+Content-Length: 133
+Content-Type: text/html
+
+<html>
+<pre>
+<h1>Index of ./sub-a/</h1>
+<a href="../">Parent Directory</a><br>
+<a href="sub-b/">sub-b/</a><br>
+</pre>
+</html>
+======== End server reply ========
+
+
+GET /sub-a/sub-b/ HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/sub-a/
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+======== Begin server reply ========
+HTTP/1.1 200 OK
+Content-Length: 145
+Content-Type: text/html
+
+<html>
+<pre>
+<h1>Index of ./sub-a/sub-b/</h1>
+<a href="../">Parent Directory</a><br>
+<a href="lion.html">lion.html</a><br>
+</pre>
+</html>
+======== End server reply ========
+
+
+GET /sub-a/sub-b/lion.html HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/sub-a/sub-b/
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+======== Begin server reply ========		<< Server's reply to GET request for html file in sub directory
+HTTP/1.1 200 OK
+Content-Length: 85
+Content-Type: text/html
+
+<html>
+<h1> This is Lion.html in Mingfei's localhost sub-b. Good work! </h1>
+</html>
+======== End server reply ========
+
+
+GET /sub-a/ HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/sub-a/sub-b/
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+======== Begin server reply ========		<< Server's reply to going back to parent directory
+HTTP/1.1 200 OK
+Content-Length: 133
+Content-Type: text/html
+
+<html>
+<pre>
+<h1>Index of ./sub-a/</h1>
+<a href="../">Parent Directory</a><br>
+<a href="sub-b/">sub-b/</a><br>
+</pre>
+</html>
+======== End server reply ========
+
+
+GET / HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/sub-a/
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+======== Begin server reply ========
+HTTP/1.1 200 OK
+Content-Length: 499
+Content-Type: text/html
+
+<html>
+<pre>
+<h1>Index of ./</h1>
+<a href="./">Parent Directory</a><br>
+<a href=".idea/">.idea/</a><br>
+<a href="addnums.html">addnums.html</a><br>
+<a href="CSC435_ProgramTwo.iml">CSC435_ProgramTwo.iml</a><br>
+<a href="dog.txt">dog.txt</a><br>
+<a href="http-streams.txt">http-streams.txt</a><br>
+<a href="lion.html">lion.html</a><br>
+<a href="out/">out/</a><br>
+<a href="serverlog.txt">serverlog.txt</a><br>
+<a href="src/">src/</a><br>
+<a href="sub-a/">sub-a/</a><br>
+</pre>
+</html>
+======== End server reply ========
+
+
+GET /addnums.html HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+======== Begin server reply ========
+HTTP/1.1 200 OK
+Content-Length: 441
+Content-Type: text/html
+
+<html>
+<head><TITLE> CSC435 Sample Form for AddNum </TITLE></head>
+<BODY>
+<H1> Addnum </H1>
+
+<FORM method="GET" action="http://localhost:2540/cgi/addnums.fake-cgi">
+
+Enter your name and two numbers:
+
+<INPUT TYPE="text" NAME="person" size=20 value="YourName"><P>
+
+<INPUT TYPE="text" NAME="num1" size=5 value="4"> <br>
+<INPUT TYPE="text" NAME="num2" size=5 value="5"> <br>
+
+<INPUT TYPE="submit" VALUE="Submit Numbers">
+
+</FORM> </BODY></html>
+======== End server reply ========
+
+
+GET /cgi/addnums.fake-cgi?person=Mingfei+Shao&num1=76&num2=87 HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/addnums.html
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+======== Begin server reply ========		<< Server's reply to CGI request
+HTTP/1.1 200 OK
+Content-Length: 79
+Content-Type: text/html
+
+<html>
+<pre>
+Dear Mingfei Shao, the sum of 76 and 87 is 163.</pre>
+</html>
+======== End server reply ========
+
+
+GET /cgi/addnums.fake-cgi?person=&num1=ghd&num2=yt HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/addnums.html
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+======== Begin server reply ========		<< Server's reply to CGI request if arguments are not valid
+HTTP/1.1 200 OK
+Content-Length: 144
+Content-Type: text/html
+
+<html>
+<pre>
+Please enter a valid person name. Please enter a valid integer for num1. Please enter a valid integer for num2. </pre>
+</html>
+======== End server reply ========
+
+
+GET /a.txt HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+======== Begin server reply ========		<< Server's reply for HTTP error (404 for example)
+HTTP/1.1 404 Not Found
+Content-Length: 169
+Content-Type: text/html
+
+<html>
+<head>
+<title>
+404 Not Found</title>
+</head>
+<body>
+<h1>Not Found</h1>
+<p>
+The requested URL ./a.txt was not found on this server.</p>
+</body>
+</html>
+======== End server reply ========
+
